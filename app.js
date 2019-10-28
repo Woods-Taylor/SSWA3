@@ -14,7 +14,9 @@ var complete = ["eat", "sleep"];
 
 
 app.get('/', function(req, res){
-    res.render('http://xkcd.com/info.0.json');
+    //res.render('http://xkcd.com/info.0.json');
+    var comic = "http://xkcd.com/info.0.json"
+    res.redirect(comic)
 });
 
 app.post('/addtask', function(req, res){
