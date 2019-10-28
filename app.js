@@ -14,7 +14,7 @@ var complete = ["eat", "sleep"];
 
 
 app.get('/', function(req, res){
-    res.render('index',{task:task, complete:complete});
+    res.render('http://xkcd.com/info.0.json');
 });
 
 app.post('/addtask', function(req, res){
