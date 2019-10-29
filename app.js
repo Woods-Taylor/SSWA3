@@ -17,8 +17,9 @@ app.get('/', function(req, res){
     //res.render('http://xkcd.com/info.0.json');
     var comic = "http://xkcd.com/info.0.json"
     fetch('http://xkcd.com/info.0.json')
-        .then(response => {
-        return response.json()
+        .then(response => response.json())
+        .then(data => {
+            image= data.img;
     })
     res.redirect(comic)
 });
