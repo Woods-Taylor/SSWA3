@@ -23,7 +23,7 @@ app.get('/', function(req, res){
         img = res.img
         console.log(data)
     })
-    res.redirect(img)
+    res.redirect(comic)
 
 }).
 
