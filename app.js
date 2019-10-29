@@ -16,8 +16,19 @@ var complete = ["eat", "sleep"];
 app.get('/', function(req, res){
     //res.render('http://xkcd.com/info.0.json');
     var comic = "http://xkcd.com/info.0.json"
-    res.redirect(comic)
-});
+
+    fetch('http://time.jsontest.com')
+    .then(res => res.json())
+    .then(body => {
+        img = res.img
+        console.log(data)
+    })
+    res.redirect(img)
+
+}).
+
+
+
 
 app.post('/addtask', function(req, res){
     var newTask = req.body.newtask;
