@@ -18,12 +18,16 @@ app.get('/', function(req, res){
     var comic = "http://xkcd.com/info.0.json"
 
     fetch('http://time.jsontest.com')
-    .then(res => res.json())
-    .then(body => {
-        img = res.img
+    .then(response => {
+        return response.json()
+    })
+    .then(data => {
+        // Work with JSON
         console.log(data)
     })
-    res.redirect(comic)
+    .catch(err => {
+
+     })
 
 }).
 
